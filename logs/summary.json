@@ -1,0 +1,10 @@
+{
+  "lots": 120,
+  "slots_per_lot": 24,
+  "unique_products": 2880,
+  "raw_rows": 17580,
+  "events_rows": 35160,
+  "objects_rows": 2894,
+  "relations_link_rows": 122160,
+  "relations_ext_rows": 122160
+}

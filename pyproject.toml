@@ -5,20 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ocpx"
 version = "0.1.0"
-description = "OCEL2-first Object-Centric Process Mining Toolkit"
+description = "Academic library for object-centric process intelligence based on OCEL 2.0"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { file = "LICENSE" }
-authors = [{ name = "ocpx contributors" }]
+authors = [
+  { name = "mineworker-x29" }
+]
 dependencies = [
   "pm4py",
+  "pandas",
+  "numpy",
+  "networkx",
 ]
 
 [project.optional-dependencies]
 dev = [
   "pytest",
-  "ruff",
-  "mypy",
+  "black",
 ]
 
 [tool.setuptools]
@@ -28,12 +31,12 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "-q"
-
-[tool.ruff]
-line-length = 100
-target-version = "py310"
-
-[tool.ruff.lint]
-select = ["E", "F", "I", "B"]
+addopts = [
+  "--import-mode=importlib",
+]
+testpaths = [
+  "tests",
+]
+pythonpath = [
+  "src",
+]
